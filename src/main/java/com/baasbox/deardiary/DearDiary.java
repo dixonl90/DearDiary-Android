@@ -1,10 +1,8 @@
 package com.baasbox.deardiary;
 
 import android.app.Application;
-import android.util.Log;
-import com.baasbox.android.*;
 
-import java.util.List;
+import com.baasbox.android.BaasBox;
 
 /**
  * Created by Andrea Tortorella on 24/01/14.
@@ -15,8 +13,9 @@ public class DearDiary extends Application {
     public void onCreate() {
         super.onCreate();
         //todo 1.2
-        BaasBox.builder(this).setAuthentication(BaasBox.Config.AuthType.SESSION_TOKEN)
-                .setApiDomain("10.0.2.0")
+        BaasBox.builder(this)
+                .setAuthentication(BaasBox.Config.AuthType.SESSION_TOKEN)
+                .setApiDomain("192.168.1.73")
                 .setPort(9000)
                 .setAppCode("1234567890")
                 .init();

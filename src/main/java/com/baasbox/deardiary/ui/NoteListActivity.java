@@ -155,7 +155,7 @@ public class NoteListActivity extends ActionBarActivity
                     .commit();
         } else {
             Intent details = new Intent(this,NotesDetailsActivity.class);
-            details.putExtra(NoteDetailsFragment.CURRENTLY_SHOWN_ITEM_KEY,document);
+            details.putExtra(NoteDetailsFragment.CURRENTLY_SHOWN_ITEM_KEY, document);
             startActivity(details);
         }
     }
